@@ -3,8 +3,8 @@ import { SYSTEM_INSTRUCTION } from "../constants";
 import { BookAppointmentArgs } from "../types";
 
 // Initialize the API client
-// NOTE: We assume process.env.API_KEY is available.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// NOTE: We assume import.meta.env.VITE_GEMINI_API_KEY is available.
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 // Define the function tool for booking appointments
 const bookAppointmentTool: FunctionDeclaration = {

@@ -158,7 +158,7 @@ export const LiveAssistantModal: React.FC<LiveAssistantModalProps> = ({ onClose,
 
     const startSession = async () => {
       try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const ai = new GoogleGenAI({ apiKey: <import className="meta"></import>.env.VITE_GEMINI_API_KEY });
         
         // 1. Initialize Audio Contexts
         inputContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 });
